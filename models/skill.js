@@ -8,7 +8,22 @@ const skills = [
     getAll,
     getOne,
     create,
+    delete: deleteOne,
+    update
   };
+
+  function update(id, updatedSkill) {
+    id = parseInt(id);
+    const skill = skills.find((skill) => skill.id === id);
+    // Merging updatedSkill into existing skill object's properties
+    Object.assign(skill, updatedSkill);
+  }
+  
+  function deleteOne(id) {
+    id = parseInt(id);
+    const skillIdx = skills.findIndex((t) => t.id === id);
+    skills.splice(skillIdx, 1);
+  }
 
   function create(skill) {
     //Add the id

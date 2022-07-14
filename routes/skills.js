@@ -12,7 +12,14 @@ router.get('/', skillsCtrl.index);
 router.get('/new', skillsCtrl.new);
 // GET /skills/:id (show functionality aka show one skill)
 router.get('/:id', skillsCtrl.show);
+// GET /skills/:id/edit (edit functionality)
+router.get('/:id/edit', skillsCtrl.edit);
 // POST /skills (post the added skill!)
 router.post('/', skillsCtrl.create);
+// DELETE /skills/:id (delete functionality)
+router.delete('/:id', skillsCtrl.delete);
+// PUT /skills/:id (update functionality)
+router.put('/:id', skillsCtrl.update);
+
 
 module.exports = router;
