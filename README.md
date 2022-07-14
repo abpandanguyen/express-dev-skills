@@ -1,6 +1,8 @@
-To sync your code with our most recent commit:
+to commit your code
 
-- git fetch --all
+- git add -A
 
-- git reset --hard origin/main
+- git commit -m "commitname"
+
+- git push -u origin main
 
