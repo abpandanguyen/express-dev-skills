@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Express To-Do</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Skills</h1>
-    <ul>
-      <% skills.forEach(function(t) { %>
-        <li>
-          <a href="/skills/<%= t.id %>"><%= t.skill %></a>
-            - 
-          <%= t.proven ? 'proven' : 'unproven' %>
-        </li>
-      <% }); %>
-    </ul>
-  </body>
+<%- include('../partials/header') %>
 
-</html>
+<h1>Skills as of <%= time %></h1>
+<ul>
+  <% skills.forEach(function(t) { %>
+    <li>
+      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+        - 
+      <%= t.proven ? 'proven' : 'unproven' %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/skills/new">Add Skill</a>
+  

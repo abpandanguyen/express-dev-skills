@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Express To-Do</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h3><%= skill.skill %></h3>
-    <h3>Tested: <%= skill.proven ? 'Yes' : 'No' %></h3>
-  </body>
-  
+<%- include('../partials/header') %>
 
-</html>
+<h1>Skill #<%= skill.id %></h1>
+<h3><%= skill.skill %></h3>
+<h3>Tested: <%= skill.proven ? 'Yes' : 'No' %></h3>

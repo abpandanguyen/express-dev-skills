@@ -6,8 +6,16 @@ const skills = [
   
   module.exports = {
     getAll,
-    getOne
+    getOne,
+    create,
   };
+
+  function create(skill) {
+    //Add the id
+    skill.id = Date.now() % 1000000;
+    skill.proven = false;
+    skills.push(skill);
+  }
   
   function getOne(id) {
     id = parseInt(id);

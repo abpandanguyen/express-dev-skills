@@ -8,7 +8,11 @@ const skillsCtrl = require ('../controllers/skills');
 
 // GET /skills (index functionality aka list all)
 router.get('/', skillsCtrl.index);
+// GET /skills/new (add new skill)
+router.get('/new', skillsCtrl.new);
 // GET /skills/:id (show functionality aka show one skill)
 router.get('/:id', skillsCtrl.show);
+// POST /skills (post the added skill!)
+router.post('/', skillsCtrl.create);
 
 module.exports = router;
